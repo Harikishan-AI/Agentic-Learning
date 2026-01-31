@@ -12,6 +12,7 @@ dependencies = [
     "comm>=0.2.3",
     "ddgs>=9.10.0",
     "faiss-cpu>=1.13.2",
+    "ipykernel>=7.1.0",
     "langchain>=1.2.3",
     "langchain-community>=0.4.1",
     "langchain-core>=1.2.7",
