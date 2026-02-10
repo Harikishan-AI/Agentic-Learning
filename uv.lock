@@ -21,7 +21,7 @@ dependencies = [
     { name = "asttokens" },
     { name = "autogen-agentchat" },
     { name = "autogen-core" },
-    { name = "autogen-ext" },
+    { name = "autogen-ext", extra = ["ollama"] },
     { name = "bs4" },
     { name = "chromadb" },
     { name = "comm" },
@@ -52,7 +52,7 @@ requires-dist = [
     { name = "asttokens", specifier = ">=3.0.1" },
     { name = "autogen-agentchat", specifier = ">=0.7.5" },
     { name = "autogen-core", specifier = ">=0.7.5" },
-    { name = "autogen-ext", specifier = ">=0.7.5" },
+    { name = "autogen-ext", extras = ["ollama"], specifier = ">=0.7.5" },
     { name = "bs4", specifier = ">=0.0.2" },
     { name = "chromadb", specifier = ">=1.4.1" },
     { name = "comm", specifier = ">=0.2.3" },
@@ -276,6 +276,12 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/e5/c8/f0651372f814c48eb64ffe921166995b7734bec0df7f0ba663383e831f58/autogen_ext-0.7.5.tar.gz", hash = "sha256:711ab9238ea66ff2abef163c331e538092bdea661620727a4a9b2ebce1c22df9", size = 417568, upload-time = "2025-09-30T06:16:24.278Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/5c/10/9333ba6c532086cce7ec7fb39e36b9a08afdbc39e2d3519f00af712e403a/autogen_ext-0.7.5-py3-none-any.whl", hash = "sha256:18cecc8aab37c7c4861fbad038a1017f0ef25e35e273aa158066ccf9d93fea4f", size = 331380, upload-time = "2025-09-30T06:16:22.832Z" },
+]
+
+[package.optional-dependencies]
+ollama = [
+    { name = "ollama" },
+    { name = "tiktoken" },
 ]
 
 [[package]]
@@ -2357,6 +2363,19 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/0b/5f/19930f824ffeb0ad4372da4812c50edbd1434f678c90c2733e1188edfc63/oauthlib-3.3.1.tar.gz", hash = "sha256:0f0f8aa759826a193cf66c12ea1af1637f87b9b4622d46e866952bb022e538c9", size = 185918, upload-time = "2025-06-19T22:48:08.269Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/be/9c/92789c596b8df838baa98fa71844d84283302f7604ed565dafe5a6b5041a/oauthlib-3.3.1-py3-none-any.whl", hash = "sha256:88119c938d2b8fb88561af5f6ee0eec8cc8d552b7bb1f712743136eb7523b7a1", size = 160065, upload-time = "2025-06-19T22:48:06.508Z" },
+]
+
+[[package]]
+name = "ollama"
+version = "0.6.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "httpx" },
+    { name = "pydantic" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/9d/5a/652dac4b7affc2b37b95386f8ae78f22808af09d720689e3d7a86b6ed98e/ollama-0.6.1.tar.gz", hash = "sha256:478c67546836430034b415ed64fa890fd3d1ff91781a9d548b3325274e69d7c6", size = 51620, upload-time = "2025-11-13T23:02:17.416Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/47/4f/4a617ee93d8208d2bcf26b2d8b9402ceaed03e3853c754940e2290fed063/ollama-0.6.1-py3-none-any.whl", hash = "sha256:fc4c984b345735c5486faeee67d8a265214a31cbb828167782dc642ce0a2bf8c", size = 14354, upload-time = "2025-11-13T23:02:16.292Z" },
 ]
 
 [[package]]
