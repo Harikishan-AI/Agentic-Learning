@@ -2,6 +2,16 @@
 
 Hands-on Jupyter notebooks covering **agents**, **tool-calling**, and **RAG (Retrieval-Augmented Generation)** using LangGraph/LangChain with multiple vector store backends.
 
+## 📑 Table of Contents
+- [🏷️ Badges](#badges)
+- [🖼️ Ecosystem Logos](#ecosystem-logos)
+- [📌 What You’ll Find Here](#what-youll-find-here)
+- [🗺️ Notebook Guide (Crisp Map)](#notebook-guide-crisp-map)
+- [🔁 Visual: Corrective RAG Loop (High Level)](#visual-corrective-rag-loop-high-level)
+- [🧰 Tech Stack (What’s Used)](#tech-stack-whats-used)
+- [🚀 Quickstart (Local)](#quickstart-local)
+- [📁 Data Folders](#data-folders)
+
 ## 🏷️ Badges
 ![Python](https://img.shields.io/badge/Python-3.12+-3776AB?logo=python&logoColor=white)
 ![Jupyter](https://img.shields.io/badge/Jupyter-Notebooks-F37626?logo=jupyter&logoColor=white)
