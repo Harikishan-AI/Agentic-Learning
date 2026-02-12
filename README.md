@@ -1,7 +1,8 @@
-# Agentic Notebooks (LangGraph + LangChain)
+# 🤖 Agentic Notebooks (LangGraph + LangChain)
 
 Hands-on Jupyter notebooks covering **agents**, **tool-calling**, and **RAG (Retrieval-Augmented Generation)** using LangGraph/LangChain with multiple vector store backends.
 
+## 🏷️ Badges
 ![Python](https://img.shields.io/badge/Python-3.12+-3776AB?logo=python&logoColor=white)
 ![Jupyter](https://img.shields.io/badge/Jupyter-Notebooks-F37626?logo=jupyter&logoColor=white)
 ![LangChain](https://img.shields.io/badge/LangChain-Framework-1C3C3C)
@@ -15,14 +16,14 @@ Hands-on Jupyter notebooks covering **agents**, **tool-calling**, and **RAG (Ret
 ![DuckDuckGo](https://img.shields.io/badge/DuckDuckGo-Search-DE5833?logo=duckduckgo&logoColor=white)
 ![Pydantic](https://img.shields.io/badge/Pydantic-Validation-E92063?logo=pydantic&logoColor=white)
 
-## What You’ll Find Here
+## 📌 What You’ll Find Here
 - Build blocks: prompts, chains, embeddings, loaders, and vector stores
 - RAG: chunking → embedding → retrieval → generation
 - Agent patterns: tool calling, routing, memory, and “corrective” retrieval loops
 
-## Notebook Guide (Crisp Map)
+## 🗺️ Notebook Guide (Crisp Map)
 
-### LangGraph (agent graphs, tools, state)
+### 🧩 LangGraph (agent graphs, tools, state)
 | Notebook | What it covers | Key concepts |
 |---|---|---|
 | [langgraph_intro.ipynb](langgraph/langgraph_intro.ipynb) | First steps with StateGraph and state passing | Typed state, node functions, message/state updates |
@@ -34,7 +35,7 @@ Hands-on Jupyter notebooks covering **agents**, **tool-calling**, and **RAG (Ret
 | [Corrective RAG Class 5.ipynb](langgraph/Corrective%20RAG%20Class%205.ipynb) | “Corrective RAG”: grade → rewrite → fallback search | Relevance grading, JSON parsing, query rewrite, web search fallback |
 | [MultiAgent_Class_6.ipynb](langgraph/MultiAgent_Class_6.ipynb) | Advanced agent behaviors with tools (and demos) | ReAct-style agent usage, commands, tool execution, search/code tools |
 
-### LangChain (foundations, ingestion, vector DBs)
+### 🧱 LangChain (foundations, ingestion, vector DBs)
 | Notebook | What it covers | Key concepts |
 |---|---|---|
 | [basics.ipynb](langchain/basics.ipynb) | Core LangChain building blocks | prompts, chains, model invocation, LangSmith env vars |
@@ -43,12 +44,12 @@ Hands-on Jupyter notebooks covering **agents**, **tool-calling**, and **RAG (Ret
 | [vectoredatabase.ipynb](langchain/FAISS/vectoredatabase.ipynb) | Vector similarity search + RAG with FAISS | cosine vs L2, FAISS indexing, retrieval, RAG patterns |
 | [code.ipynb](langchain/Pinecone/code.ipynb) | Pinecone-backed vector store | index creation, upsert, query, PineconeVectorStore |
 
-### Pydantic (structured outputs & validation)
+### ✅ Pydantic (structured outputs & validation)
 | Notebook | What it covers | Key concepts |
 |---|---|---|
 | [pydantic.ipynb](pydantic/pydantic.ipynb) | Data validation vs plain dataclasses | BaseModel, type coercion, ValidationError, optional fields |
 
-## Visual: Corrective RAG Loop (High Level)
+## 🔁 Visual: Corrective RAG Loop (High Level)
 ```mermaid
 flowchart LR
   Q[User Question] --> R[Retrieve from Vector Store]
@@ -59,7 +60,7 @@ flowchart LR
   S --> R
 ```
 
-## Tech Stack (What’s Used)
+## 🧰 Tech Stack (What’s Used)
 - LLMs: Groq (ChatGroq), optional Google GenAI integrations
 - Embeddings: Sentence-Transformers via HuggingFaceEmbeddings
 - Vector stores: ChromaDB, FAISS, Pinecone
@@ -67,7 +68,7 @@ flowchart LR
 - Parsing/validation: Pydantic (plus JSON output parsing patterns)
 - Document ingestion: Text/PDF loaders (pypdf, pymupdf), BeautifulSoup (bs4)
 
-## Quickstart (Local)
+## 🚀 Quickstart (Local)
 1. Create a virtual environment and install deps:
    - `pip install -r requirements.txt`
 2. Create a `.env` file (it is ignored by git) and set keys you plan to use:
@@ -79,5 +80,5 @@ flowchart LR
    - `LANGSMITH_API_KEY`, `LANGSMITH_PROJECT`, `LANGSMITH_TRACING_V2` (if tracing)
 3. Open notebooks in Jupyter and run top-to-bottom.
 
-## Data Folders
+## 📁 Data Folders
 - [data/](data/) and [data2/](data2/) contain sample inputs used by some notebooks.
