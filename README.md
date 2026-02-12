@@ -26,17 +26,6 @@ Hands-on Jupyter notebooks covering **agents**, **tool-calling**, and **RAG (Ret
 ![DuckDuckGo](https://img.shields.io/badge/DuckDuckGo-Search-DE5833?logo=duckduckgo&logoColor=white)
 ![Pydantic](https://img.shields.io/badge/Pydantic-Validation-E92063?logo=pydantic&logoColor=white)
 
-## 🖼️ Ecosystem Logos
-| Tech | Logo | Link |
-|---|---:|---|
-| Hugging Face | <img height="28" alt="Hugging Face" src="https://unpkg.com/@lobehub/icons-static-svg@latest/icons/huggingface.svg" /> | https://huggingface.co |
-| LangChain | <img height="28" alt="LangChain" src="https://unpkg.com/@lobehub/icons-static-svg@latest/icons/langchain.svg" /> | https://python.langchain.com |
-| LangGraph | <img height="28" alt="LangGraph" src="https://unpkg.com/@lobehub/icons-static-svg@latest/icons/langgraph.svg" /> | https://langchain-ai.github.io/langgraph/ |
-| LangSmith | <img height="28" alt="LangSmith" src="https://unpkg.com/@lobehub/icons-static-svg@latest/icons/langsmith.svg" /> | https://smith.langchain.com |
-| AutoGen | <img height="28" alt="AutoGen" src="https://unpkg.com/@lobehub/icons-static-svg@latest/icons/autogen.svg" /> | https://microsoft.github.io/autogen/ |
-| n8n | <img height="28" alt="n8n" src="https://unpkg.com/@lobehub/icons-static-svg@latest/icons/n8n.svg" /> | https://n8n.io |
-| Agentic AI | <img height="28" alt="Agentic AI" src="https://raw.githubusercontent.com/twitter/twemoji/master/assets/svg/1f916.svg" /> | https://www.ibm.com/think/topics/agentic-ai |
-
 ## 📌 What You’ll Find Here
 - Build blocks: prompts, chains, embeddings, loaders, and vector stores
 - RAG: chunking → embedding → retrieval → generation
