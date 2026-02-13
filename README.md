@@ -69,26 +69,3 @@ flowchart LR
   W --> S[Web Search]
   S --> R
 ```
-
-## 🧰 Tech Stack (What’s Used)
-- LLMs: Groq (ChatGroq), optional Google GenAI integrations
-- Embeddings: Sentence-Transformers via HuggingFaceEmbeddings
-- Vector stores: ChromaDB, FAISS, Pinecone
-- Search: Tavily, DuckDuckGo (ddgs)
-- Parsing/validation: Pydantic (plus JSON output parsing patterns)
-- Document ingestion: Text/PDF loaders (pypdf, pymupdf), BeautifulSoup (bs4)
-
-## 🚀 Quickstart (Local)
-1. Create a virtual environment and install deps:
-   - `pip install -r requirements.txt`
-2. Create a `.env` file (it is ignored by git) and set keys you plan to use:
-   - `GROQ_API_KEY`
-   - `HUGGINGFACE_API_KEY`
-   - `TAVILY_API_KEY` (for Tavily search notebooks)
-   - `PINECONE_API_KEY` (for Pinecone notebook)
-   - `GOOGLE_API_KEY` (if using Google GenAI examples)
-   - `LANGSMITH_API_KEY`, `LANGSMITH_PROJECT`, `LANGSMITH_TRACING_V2` (if tracing)
-3. Open notebooks in Jupyter and run top-to-bottom.
-
-## 📁 Data Folders
-- [data/](data/) and [data2/](data2/) contain sample inputs used by some notebooks.
