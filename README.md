@@ -2,20 +2,6 @@
 
 Hands-on Jupyter notebooks covering **agents**, **tool-calling**, and **RAG (Retrieval-Augmented Generation)** using LangGraph/LangChain with multiple vector store backends.
 
-## 🏷️ Badges
-![Python](https://img.shields.io/badge/Python-3.12+-3776AB?logo=python&logoColor=white)
-![Jupyter](https://img.shields.io/badge/Jupyter-Notebooks-F37626?logo=jupyter&logoColor=white)
-![LangChain](https://img.shields.io/badge/LangChain-Framework-1C3C3C)
-![LangGraph](https://img.shields.io/badge/LangGraph-Graphs-6E56CF)
-![Groq](https://img.shields.io/badge/Groq-LLM%20API-000000)
-![HuggingFace](https://img.shields.io/badge/Hugging%20Face-Embeddings-FFD21E?logo=huggingface&logoColor=000)
-![Chroma](https://img.shields.io/badge/ChromaDB-Vector%20Store-6B4FBB)
-![FAISS](https://img.shields.io/badge/FAISS-Vector%20Search-0467DF)
-![Pinecone](https://img.shields.io/badge/Pinecone-Vector%20DB-0A0A0A)
-![Tavily](https://img.shields.io/badge/Tavily-Web%20Search-2B6CB0)
-![DuckDuckGo](https://img.shields.io/badge/DuckDuckGo-Search-DE5833?logo=duckduckgo&logoColor=white)
-![Pydantic](https://img.shields.io/badge/Pydantic-Validation-E92063?logo=pydantic&logoColor=white)
-
 ## 📌 What You’ll Find Here
 - Build blocks: prompts, chains, embeddings, loaders, and vector stores
 - RAG: chunking → embedding → retrieval → generation
