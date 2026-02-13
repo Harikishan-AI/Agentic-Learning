@@ -21,7 +21,7 @@ dependencies = [
     { name = "asttokens" },
     { name = "autogen-agentchat" },
     { name = "autogen-core" },
-    { name = "autogen-ext", extra = ["ollama"] },
+    { name = "autogen-ext", extra = ["http-tool", "ollama"] },
     { name = "bs4" },
     { name = "chromadb" },
     { name = "comm" },
@@ -52,7 +52,7 @@ requires-dist = [
     { name = "asttokens", specifier = ">=3.0.1" },
     { name = "autogen-agentchat", specifier = ">=0.7.5" },
     { name = "autogen-core", specifier = ">=0.7.5" },
-    { name = "autogen-ext", extras = ["ollama"], specifier = ">=0.7.5" },
+    { name = "autogen-ext", extras = ["http-tool", "ollama"], specifier = ">=0.7.5" },
     { name = "bs4", specifier = ">=0.0.2" },
     { name = "chromadb", specifier = ">=1.4.1" },
     { name = "comm", specifier = ">=0.2.3" },
@@ -279,6 +279,10 @@ wheels = [
 ]
 
 [package.optional-dependencies]
+http-tool = [
+    { name = "httpx" },
+    { name = "json-schema-to-pydantic" },
+]
 ollama = [
     { name = "ollama" },
     { name = "tiktoken" },
@@ -1416,6 +1420,18 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/41/f2/d34e8b3a08a9cc79a50b2208a93dce981fe615b64d5a4d4abee421d898df/joblib-1.5.3.tar.gz", hash = "sha256:8561a3269e6801106863fd0d6d84bb737be9e7631e33aaed3fb9ce5953688da3", size = 331603, upload-time = "2025-12-15T08:41:46.427Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/7b/91/984aca2ec129e2757d1e4e3c81c3fcda9d0f85b74670a094cc443d9ee949/joblib-1.5.3-py3-none-any.whl", hash = "sha256:5fc3c5039fc5ca8c0276333a188bbd59d6b7ab37fe6632daa76bc7f9ec18e713", size = 309071, upload-time = "2025-12-15T08:41:44.973Z" },
+]
+
+[[package]]
+name = "json-schema-to-pydantic"
+version = "0.4.9"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "pydantic" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/87/b8/90a3af11bcf9f8c76f1f7399705cd6c23c2271f1d70f882529bde2c1ad86/json_schema_to_pydantic-0.4.9.tar.gz", hash = "sha256:f71bc57c9016a6cecaf259392b4a3f35a34ad79da3934a64d21d73f526c6e28d", size = 53020, upload-time = "2026-02-01T20:47:47.29Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/ad/2e/58bada6e9195417baff0b06be34cd3b1a6c19153b4d08a4dea2e8b324cb5/json_schema_to_pydantic-0.4.9-py3-none-any.whl", hash = "sha256:7b1126aa70a482f8442866139d14e71a5f678ae5bece72b51db28374c4237cc9", size = 16351, upload-time = "2026-02-01T20:47:45.705Z" },
 ]
 
 [[package]]
@@ -4016,8 +4032,8 @@ dependencies = [
     { name = "typing-extensions" },
 ]
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/c9/2f/0b295dd8d199ef71e6f176f576473d645d41357b7b8aa978cc6b042575df/torch-2.10.0-1-cp312-none-macosx_11_0_arm64.whl", hash = "sha256:6abb224c2b6e9e27b592a1c0015c33a504b00a0e0938f1499f7f514e9b7bfb5c", size = 79498197, upload-time = "2026-02-06T17:37:27.627Z" },
-    { url = "https://files.pythonhosted.org/packages/a4/1b/af5fccb50c341bd69dc016769503cb0857c1423fbe9343410dfeb65240f2/torch-2.10.0-1-cp313-none-macosx_11_0_arm64.whl", hash = "sha256:7350f6652dfd761f11f9ecb590bfe95b573e2961f7a242eccb3c8e78348d26fe", size = 79498248, upload-time = "2026-02-06T17:37:31.982Z" },
+    { url = "https://files.pythonhosted.org/packages/d3/54/a2ba279afcca44bbd320d4e73675b282fcee3d81400ea1b53934efca6462/torch-2.10.0-2-cp312-none-macosx_11_0_arm64.whl", hash = "sha256:13ec4add8c3faaed8d13e0574f5cd4a323c11655546f91fbe6afa77b57423574", size = 79498202, upload-time = "2026-02-10T21:44:52.603Z" },
+    { url = "https://files.pythonhosted.org/packages/ec/23/2c9fe0c9c27f7f6cb865abcea8a4568f29f00acaeadfc6a37f6801f84cb4/torch-2.10.0-2-cp313-none-macosx_11_0_arm64.whl", hash = "sha256:e521c9f030a3774ed770a9c011751fb47c4d12029a3d6522116e48431f2ff89e", size = 79498254, upload-time = "2026-02-10T21:44:44.095Z" },
     { url = "https://files.pythonhosted.org/packages/cc/af/758e242e9102e9988969b5e621d41f36b8f258bb4a099109b7a4b4b50ea4/torch-2.10.0-cp312-cp312-manylinux_2_28_aarch64.whl", hash = "sha256:5fd4117d89ffd47e3dcc71e71a22efac24828ad781c7e46aaaf56bf7f2796acf", size = 145996088, upload-time = "2026-01-21T16:24:44.171Z" },
     { url = "https://files.pythonhosted.org/packages/23/8e/3c74db5e53bff7ed9e34c8123e6a8bfef718b2450c35eefab85bb4a7e270/torch-2.10.0-cp312-cp312-manylinux_2_28_x86_64.whl", hash = "sha256:787124e7db3b379d4f1ed54dd12ae7c741c16a4d29b49c0226a89bea50923ffb", size = 915711952, upload-time = "2026-01-21T16:23:53.503Z" },
     { url = "https://files.pythonhosted.org/packages/6e/01/624c4324ca01f66ae4c7cd1b74eb16fb52596dce66dbe51eff95ef9e7a4c/torch-2.10.0-cp312-cp312-win_amd64.whl", hash = "sha256:2c66c61f44c5f903046cc696d088e21062644cbe541c7f1c4eaae88b2ad23547", size = 113757972, upload-time = "2026-01-21T16:24:39.516Z" },
