@@ -22,6 +22,7 @@ dependencies = [
     { name = "autogen-agentchat" },
     { name = "autogen-core" },
     { name = "autogen-ext", extra = ["http-tool", "ollama"] },
+    { name = "autogenstudio" },
     { name = "bs4" },
     { name = "chromadb" },
     { name = "comm" },
@@ -53,6 +54,7 @@ requires-dist = [
     { name = "autogen-agentchat", specifier = ">=0.7.5" },
     { name = "autogen-core", specifier = ">=0.7.5" },
     { name = "autogen-ext", extras = ["http-tool", "ollama"], specifier = ">=0.7.5" },
+    { name = "autogenstudio", specifier = ">=0.0.49" },
     { name = "bs4", specifier = ">=0.0.2" },
     { name = "chromadb", specifier = ">=1.4.1" },
     { name = "comm", specifier = ">=0.2.3" },
@@ -198,6 +200,15 @@ wheels = [
 ]
 
 [[package]]
+name = "annotated-doc"
+version = "0.0.4"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/57/ba/046ceea27344560984e26a590f90bc7f4a75b06701f653222458922b558c/annotated_doc-0.0.4.tar.gz", hash = "sha256:fbcda96e87e9c92ad167c2e53839e57503ecfda18804ea28102353485033faa4", size = 7288, upload-time = "2025-11-10T22:07:42.062Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/1e/d3/26bf1008eb3d2daa8ef4cacc7f3bfdc11818d111f7e2d0201bc6e3b49d45/annotated_doc-0.0.4-py3-none-any.whl", hash = "sha256:571ac1dc6991c450b25a9c2d84a3705e2ae7a53467b5d111c24fa8baabbed320", size = 5303, upload-time = "2025-11-10T22:07:40.673Z" },
+]
+
+[[package]]
 name = "annotated-types"
 version = "0.7.0"
 source = { registry = "https://pypi.org/simple" }
@@ -217,6 +228,19 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/96/f0/5eb65b2bb0d09ac6776f2eb54adee6abe8228ea05b20a5ad0e4945de8aac/anyio-4.12.1.tar.gz", hash = "sha256:41cfcc3a4c85d3f05c932da7c26d0201ac36f72abd4435ba90d0464a3ffed703", size = 228685, upload-time = "2026-01-06T11:45:21.246Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/38/0e/27be9fdef66e72d64c0cdc3cc2823101b80585f8119b5c112c2e8f5f7dab/anyio-4.12.1-py3-none-any.whl", hash = "sha256:d405828884fc140aa80a3c667b8beed277f1dfedec42ba031bd6ac3db606ab6c", size = 113592, upload-time = "2026-01-06T11:45:19.497Z" },
+]
+
+[[package]]
+name = "arxiv"
+version = "2.4.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "feedparser" },
+    { name = "requests" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/8d/aa/dc1c6c633f63fce090e7c067af8c528a5e61218a61c266ff615d46cbde0a/arxiv-2.4.0.tar.gz", hash = "sha256:cabe5470d031aa3f22d2744a7600391c62c3489653f0c62bec9019e62bb0554b", size = 74546, upload-time = "2026-01-05T02:43:16.823Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/11/63/9e71153b2d48c98f8079c90d7211bc65515cc1ad18c3328c3c0472e68f44/arxiv-2.4.0-py3-none-any.whl", hash = "sha256:c02ccb09a777aaadd75d3bc1d2627894ef9c987c651d0dacd864b9f69fb0569f", size = 12065, upload-time = "2026-01-05T02:43:12.542Z" },
 ]
 
 [[package]]
@@ -286,6 +310,24 @@ http-tool = [
 ollama = [
     { name = "ollama" },
     { name = "tiktoken" },
+]
+
+[[package]]
+name = "autogenstudio"
+version = "0.0.49"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "arxiv" },
+    { name = "fastapi" },
+    { name = "pyautogen" },
+    { name = "pydantic" },
+    { name = "typer" },
+    { name = "uvicorn" },
+    { name = "websockets" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/e0/11/2c0878a1a18445c807906a087238eb66fec831854f4cd82d1dbac15662ab/autogenstudio-0.0.49.tar.gz", hash = "sha256:d43c0903f52a76cb67da4697d8f433e4b0615418aa9e677cb28130359cfedc83", size = 2710213, upload-time = "2024-03-12T16:24:22.292Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/4a/1d/0c0c6b9872a61acd32d3b70758fecfd739b81039d3514b7a15f0835f5341/autogenstudio-0.0.49-py3-none-any.whl", hash = "sha256:2acdf1749499aa3680f06f763882736c973ee233caec3110a08aba45b75d7417", size = 2741602, upload-time = "2024-03-12T16:24:17.958Z" },
 ]
 
 [[package]]
@@ -837,6 +879,34 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/41/43/948d10bf42735709edb5ae51e23297d034086f17fc7279fef385a7acb473/fake_useragent-2.2.0.tar.gz", hash = "sha256:4e6ab6571e40cc086d788523cf9e018f618d07f9050f822ff409a4dfe17c16b2", size = 158898, upload-time = "2025-04-14T15:32:19.238Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/51/37/b3ea9cd5558ff4cb51957caca2193981c6b0ff30bd0d2630ac62505d99d0/fake_useragent-2.2.0-py3-none-any.whl", hash = "sha256:67f35ca4d847b0d298187443aaf020413746e56acd985a611908c73dba2daa24", size = 161695, upload-time = "2025-04-14T15:32:17.732Z" },
+]
+
+[[package]]
+name = "fastapi"
+version = "0.129.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "annotated-doc" },
+    { name = "pydantic" },
+    { name = "starlette" },
+    { name = "typing-extensions" },
+    { name = "typing-inspection" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/48/47/75f6bea02e797abff1bca968d5997793898032d9923c1935ae2efdece642/fastapi-0.129.0.tar.gz", hash = "sha256:61315cebd2e65df5f97ec298c888f9de30430dd0612d59d6480beafbc10655af", size = 375450, upload-time = "2026-02-12T13:54:52.541Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/9e/dd/d0ee25348ac58245ee9f90b6f3cbb666bf01f69be7e0911f9851bddbda16/fastapi-0.129.0-py3-none-any.whl", hash = "sha256:b4946880e48f462692b31c083be0432275cbfb6e2274566b1be91479cc1a84ec", size = 102950, upload-time = "2026-02-12T13:54:54.528Z" },
+]
+
+[[package]]
+name = "feedparser"
+version = "6.0.12"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "sgmllib3k" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/dc/79/db7edb5e77d6dfbc54d7d9df72828be4318275b2e580549ff45a962f6461/feedparser-6.0.12.tar.gz", hash = "sha256:64f76ce90ae3e8ef5d1ede0f8d3b50ce26bcce71dd8ae5e82b1cd2d4a5f94228", size = 286579, upload-time = "2025-09-10T13:33:59.486Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/4e/eb/c96d64137e29ae17d83ad2552470bafe3a7a915e85434d9942077d7fd011/feedparser-6.0.12-py3-none-any.whl", hash = "sha256:6bbff10f5a52662c00a2e3f86a38928c37c48f77b3c511aedcd51de933549324", size = 81480, upload-time = "2025-09-10T13:33:58.022Z" },
 ]
 
 [[package]]
@@ -2968,6 +3038,18 @@ wheels = [
 ]
 
 [[package]]
+name = "pyautogen"
+version = "0.10.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "autogen-agentchat" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/85/34/329a2be17d87c3884e3f59acfaa3baf1d0efc6b84bccc5b08677adb6f3e6/pyautogen-0.10.0.tar.gz", hash = "sha256:ed42d7d94144d1333cc5727d904bf1c7a8deb8337b185adba332086997e4d682", size = 3413, upload-time = "2025-07-15T00:37:27.596Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/a2/78/b5ec481c9705a482ae6692270f991548b3d265ed60048a325bbbb571e39d/pyautogen-0.10.0-py3-none-any.whl", hash = "sha256:957be90fae96cb324de168151e758f116d81e249dd2e65cf353550fb4f15f3c6", size = 3029, upload-time = "2025-07-15T00:37:26.17Z" },
+]
+
+[[package]]
 name = "pybase64"
 version = "1.4.3"
 source = { registry = "https://pypi.org/simple" }
@@ -3734,6 +3816,12 @@ wheels = [
 ]
 
 [[package]]
+name = "sgmllib3k"
+version = "1.0.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/9e/bd/3704a8c3e0942d711c1299ebf7b9091930adae6675d7c8f476a7ce48653c/sgmllib3k-1.0.0.tar.gz", hash = "sha256:7868fb1c8bfa764c1ac563d3cf369c381d1325d36124933a726f29fcdaa812e9", size = 5750, upload-time = "2010-08-24T14:33:52.445Z" }
+
+[[package]]
 name = "shellingham"
 version = "1.5.4"
 source = { registry = "https://pypi.org/simple" }
@@ -3896,6 +3984,19 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/33/75/f28622ba6dde79cd545055ea7bd4062dc934e0621f7b3be2891f8563f8de/sqlalchemy-2.0.46-cp314-cp314t-musllinux_1_2_aarch64.whl", hash = "sha256:ff33c6e6ad006bbc0f34f5faf941cfc62c45841c64c0a058ac38c799f15b5ede", size = 3470008, upload-time = "2026-01-21T18:33:11.725Z" },
     { url = "https://files.pythonhosted.org/packages/a9/42/4afecbbc38d5e99b18acef446453c76eec6fbd03db0a457a12a056836e22/sqlalchemy-2.0.46-cp314-cp314t-musllinux_1_2_x86_64.whl", hash = "sha256:82ec52100ec1e6ec671563bbd02d7c7c8d0b9e71a0723c72f22ecf52d1755330", size = 3476137, upload-time = "2026-01-21T18:45:15.001Z" },
     { url = "https://files.pythonhosted.org/packages/fc/a1/9c4efa03300926601c19c18582531b45aededfb961ab3c3585f1e24f120b/sqlalchemy-2.0.46-py3-none-any.whl", hash = "sha256:f9c11766e7e7c0a2767dda5acb006a118640c9fc0a4104214b96269bfb78399e", size = 1937882, upload-time = "2026-01-21T18:22:10.456Z" },
+]
+
+[[package]]
+name = "starlette"
+version = "0.52.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "anyio" },
+    { name = "typing-extensions", marker = "python_full_version < '3.13'" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/c4/68/79977123bb7be889ad680d79a40f339082c1978b5cfcf62c2d8d196873ac/starlette-0.52.1.tar.gz", hash = "sha256:834edd1b0a23167694292e94f597773bc3f89f362be6effee198165a35d62933", size = 2653702, upload-time = "2026-01-18T13:34:11.062Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/81/0d/13d1d239a25cbfb19e740db83143e95c772a1fe10202dda4b76792b114dd/starlette-0.52.1-py3-none-any.whl", hash = "sha256:0029d43eb3d273bc4f83a08720b4912ea4b071087a3b48db01b7c839f7954d74", size = 74272, upload-time = "2026-01-18T13:34:09.188Z" },
 ]
 
 [[package]]
