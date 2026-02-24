@@ -32,6 +32,8 @@ async def main():
 
     # Use McpWorkbench to manage the MCP server lifecycle and tools
     async with McpWorkbench(server_params=params) as workbench:
+        # tools = await workbench.list_tools()
+        # print(tools)
         agent = AssistantAgent(
             name="TimeAgent",
             model_client=model,
@@ -41,7 +43,7 @@ async def main():
         )
 
         # Run the agent on a specific task
-        result = await agent.run(task="What is the current time in New Delhi?")
+        result = await agent.run(task="What is the time right now in london")
         
         # Output the final response
         print(f"\nResponse: {result.messages[-1].content}")
