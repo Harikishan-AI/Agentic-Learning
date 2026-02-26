@@ -1,6 +1,7 @@
 import datetime
 from zoneinfo import ZoneInfo
-from google.adk.agents import Agent
+#agnet or LlmAgent (its the same)
+from google.adk.agents import Agent, LlmAgent
 from dotenv import load_dotenv
 load_dotenv()
 import os
@@ -58,7 +59,7 @@ def get_current_time(city: str) -> dict:
     return {"status": "success", "report": report}
 
 
-root_agent = Agent(
+root_agent = LlmAgent(
     name="weather_time_agent",
     model="gemini-3-flash-preview",
     description=(
