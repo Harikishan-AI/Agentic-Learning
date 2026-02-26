@@ -13,6 +13,7 @@ dependencies = [
     "bs4>=0.0.2",
     "chromadb>=1.4.1",
     "comm>=0.2.3",
+    "crewai[tools]>=0.95.0",
     "ddgs>=9.10.0",
     "docker>=7.1.0",
     "dotenv>=0.9.9",
