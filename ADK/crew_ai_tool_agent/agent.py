@@ -12,12 +12,7 @@ if not SERPER_API_KEY:
     raise ValueError("SERPER_API_KEY environment variable is not set.")
 
 # Tool Definition
-serper_crewai_tool = SerperDevTool(
-    country="in",
-    locale="in",
-    location="Mumbai, Maharashtra, India",
-    n_results=10,
-)
+serper_crewai_tool = SerperDevTool(n_results=10)
 
 # Tool Wrapping by using Crewai Tool by adk
 adk_serper_tool = CrewaiTool(
