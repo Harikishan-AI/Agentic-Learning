@@ -60,6 +60,65 @@ Hands-on Jupyter notebooks covering **agents**, **tool-calling**, and **RAG (Ret
 | [session_runner/runner.py](ADK/session_runner/runner.py) | Persistent session management and state | Runner, InMemorySessionService, stateful agents |
 | [structred_output/agent.py](ADK/structred_output/agent.py) | Structured data extraction with Pydantic | output_schema, BaseModel, data validation |
 
+## 🏗️ Architecture Diagrams
+
+### 🤖 AutoGen Team Patterns
+AutoGen supports various ways to coordinate multiple agents:
+
+#### 1. Round Robin (Fixed Sequence)
+Agents speak in a pre-defined circular order.
+```mermaid
+graph LR
+    User([User]) --> Team[RoundRobinGroupChat]
+    Team --> A[Agent 1]
+    A --> B[Agent 2]
+    B --> C[Agent 3]
+    C --> A
+```
+
+#### 2. Selector (Dynamic Selection)
+A "Selector" LLM determines the next best agent to speak based on their `description`.
+```mermaid
+graph TD
+    User([User]) --> Team[SelectorGroupChat]
+    Team --> Selector{Selector LLM}
+    Selector -->|analyzes task| A[Planning Agent]
+    Selector -->|analyzes task| B[Worker Agent]
+    Selector -->|analyzes task| C[Analyst Agent]
+    A & B & C --> Team
+```
+
+#### 3. Graph Flow (State Machine)
+Sequence is defined by a Directed Graph (DiGraph) with explicit edges.
+```mermaid
+graph LR
+    User([User]) --> Graph[DiGraphBuilder / GraphFlow]
+    Graph --> Writer[Writer Agent]
+    Writer --> Reviewer[Reviewer Agent]
+    Reviewer -- feedback --> Writer
+    Reviewer -- approved --> End([End Task])
+```
+
+### 🛠️ ADK Core Architecture
+The Google Agent Development Kit (ADK) focuses on session management and persistent runners.
+
+```mermaid
+graph TD
+    User([User]) --> Runner[Runner]
+    subgraph ADK Framework
+        Runner --> Session[InMemorySessionService]
+        Runner --> Agent[Agent / LlmAgent]
+        Session <-->|State/Context| Agent
+        Agent --> Tools[Tools Library]
+        subgraph Tools Library
+            Tools --> BuiltIn[Google Search / etc.]
+            Tools --> Custom[Python Functions]
+            Tools --> CrewAI[CrewAI Tool Wrappers]
+        end
+    end
+    Agent --> LLM[Gemini / LiteLLM]
+```
+
 ## 🔁 Visual: Corrective RAG Loop (High Level)
 ```mermaid
 flowchart LR
