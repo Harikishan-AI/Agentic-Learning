@@ -48,6 +48,17 @@ Hands-on Jupyter notebooks covering **agents**, **tool-calling**, and **RAG (Ret
 | [Selection Group Chat.ipynb](autogen/Selection%20Group%20Chat.ipynb) | Group chat with agent selection | group chat, speaker selection, collaboration |
 | [Human in the loop.ipynb](autogen/Human%20in%20the%20loop.ipynb) | Human supervision in AutoGen flows | human approvals, intervention, oversight |
 | [Human in the loop Outside.ipynb](autogen/Human%20in%20the%20loop%20Outside.ipynb) | Human-in-the-loop with external context | external tools, human feedback, review loops |
+| [mcp_in_autogen.py](autogen/MCP/mcp_in_autogen.py) | Connecting AutoGen agents to MCP servers | McpWorkbench, StdioServerParams, tool discovery |
+
+### 🛠️ Agent Development Kit (ADK)
+| File | What it covers | Key concepts |
+|---|---|---|
+| [built_in_tool_agent/agent.py](ADK/built_in_tool_agent/agent.py) | Multi-agent orchestration with built-in tools | AgentTool, google_search, agent wrapping |
+| [crew_ai_tool_agent/agent.py](ADK/crew_ai_tool_agent/agent.py) | Integrating CrewAI tools into ADK | CrewaiTool, SerperDevTool, tool wrapping |
+| [custom_tool_agent/agent.py](ADK/custom_tool_agent/agent.py) | Custom Python functions as agent tools | Function tools, LlmAgent, tool definitions |
+| [openrouter_agent/agent.py](ADK/openrouter_agent/agent.py) | Using external LLMs via OpenRouter | LiteLlm, OpenRouter integration, multi-provider support |
+| [session_runner/runner.py](ADK/session_runner/runner.py) | Persistent session management and state | Runner, InMemorySessionService, stateful agents |
+| [structred_output/agent.py](ADK/structred_output/agent.py) | Structured data extraction with Pydantic | output_schema, BaseModel, data validation |
 
 ## 🔁 Visual: Corrective RAG Loop (High Level)
 ```mermaid
