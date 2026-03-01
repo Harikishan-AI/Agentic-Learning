@@ -1,11 +1,15 @@
-from google.adk.agents import LlmAgent, ParallelAgent
+from google.adk.agents import LlmAgent, ParallelAgent, SequentialAgent
+from google.adk.models.lite_llm import LiteLlm
+from dotenv import load_dotenv
+import os
+load_dotenv()
 
-GEMINI = 'gemini-2.0-flash'
+api_key=os.getenv("OPENROUTER_API_KEY")
 
 def make_translator_agent(lang_code, output_key):
     return LlmAgent(
         name=f'Transalor_Agent_{lang_code}',
-        model=GEMINI,
+        model=LiteLlm(model="openrouter/qwen/qwen3-vl-235b-a22b-thinking", api_key=api_key),
         instruction=f'Create a localized marketing tagline in {lang_code} for the user’s product/idea. Return only the tagline text.',
         output_key=output_key,
     )
@@ -21,11 +25,9 @@ parallel_translate = ParallelAgent(
     sub_agents=[spanish, french, german],
 )
 
-# root_agent = parallel_translate
-
 merger_agent = LlmAgent(
     name='Merger_Agent',
-    model=GEMINI,
+    model=LiteLlm(model="openrouter/qwen/qwen3-vl-235b-a22b-thinking", api_key=api_key),
     instruction='''Package the taglines neatly:
      **Spanish** {spanish_key}
      **French** {French_key}
